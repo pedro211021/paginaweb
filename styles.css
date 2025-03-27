@@ -1,0 +1,69 @@
+body{
+    background-color: aquamarine;
+}
+.menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menuCSS3 a {
+    display: block;
+    padding: 1em 2em; /* Ajuste del padding */
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.menuCSS3 a:hover {
+    background-color: #697cbe;
+}
+
+.menuCSS3 ul li {
+    position: relative; /* Necesario para el submenú */
+}
+.menuCSS3 ul li ul {
+    display: none;
+    position: absolute; /* Posiciona el submenú */
+    top: 100%; /* Muestra el submenú debajo del elemento padre */
+    left: 0;
+    padding: 0; /* Elimina padding del submenú */
+    margin: 0;
+    list-style: none;
+    background-color: #F9B53C; /* Color de fondo del submenú */
+}
+
+.menuCSS3 ul li:hover ul {
+    display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+.menuCSS3 ul li ul li a {
+    padding: 1em;
+}
+/* Estilo para pantallas pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .menuCSS3 ul {
+        flex-direction: column; /* Cambia la dirección del menú a columna */
+    }
+
+    .menuCSS3 ul li {
+        width: 100%; /* Asegura que cada elemento ocupe el 100% del ancho */
+    }
+
+    .menuCSS3 a {
+        padding: 1em; /* Mantiene el tamaño adecuado */
+        text-align: center; /* Centra el texto en los elementos del menú */
+    }
+
+    /* Hacer que el submenú sea más accesible en móviles */
+    .menuCSS3 ul li ul {
+        position: static; /* Cambia la posición para que el submenú se muestre debajo del elemento principal */
+        display: none;
+    }
+
+    .menuCSS3 ul li:hover ul {
+        display: block; /* Muestra el submenú al hacer hover en móviles */
+    }
+}
